@@ -1,0 +1,10 @@
+If you search with the artist name on the searchbar, you can get your artist's "Top-10 Tracks on Spotify" as a table.
+And if you click the column name like "Spotify Popularity", you can get the data on ascending order of the "Spotify Popularity".
+
+1. Created a single-page using React
+2. Fetched the public API(Spotify) data for the request
+3. Used npm 'react-table' to display the data as a table
+4. Used Heroku for running an app
+
+* accesstoken from Spotify is expired periodically, so it might not work if it is expired.
+  I should have got new token whenever it expired.
