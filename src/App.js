@@ -14,7 +14,7 @@ class App extends Component {
       name: '',
       tracks: null,
       id: '',
-      accessToken: 'BQCRKCq7aUy0MY5XLNuF4KjF86zu5vfdRhfjNWTWvrw39YtfGR63HITP956kUKY-bLD2q8E7V9IlpY5o2bJ8Oqdv5zT4XnetVAM86yFUxcdfDFToNlCyniJ4HODTrYPTUmdtA-0gaFIaIkMKqZuUa-mrAtvyBMqjhg'
+      accessToken: 'BQAAJRUCs1ZiKGKsbYR_bOr9UCVzsQuBpDY-XUqC-NYgEyI8HKCMm3LT1Wv1m5T6RnVj4aB36fdXebmEXvRsgfuEwrSnzChFXSbna8FxgEyq3io61TenQxE2FYE7qUwdqrwMCDvSUWXA84misGhddnPMie-hTyKquA'
     }
     
     // this.searchArtist = this.searchArtist.bind(this);
