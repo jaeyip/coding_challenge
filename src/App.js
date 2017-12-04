@@ -16,13 +16,9 @@ class App extends Component {
       id: '',
       accessToken: 'BQBo1i7wMs-fqxUqIk4PDhfZ9G_993XdMy7IQRPTPG05Wcleu7Sb1V_s8Yor9_5pzTsym2MQZwhMmOzuszWBxSa3l93FPsHXvyCGE2BiDRrrId9-dt5mVO33CB6Hy3A9iCAQTYldgmbj_ujOCEJG81wEZegtCpa83w'
     }
-    
-    // this.searchArtist = this.searchArtist.bind(this);
-
   }
 
   searchArtist() {
-    // console.log('this.state', this.state);
     var BASE_URL = 'https://api.spotify.com/v1/search?';
     var FETCH_URL = BASE_URL + 'q=' + this.state.query + '&type=artist&limit=1';
     var accessToken = this.state.accessToken;
@@ -44,16 +40,12 @@ class App extends Component {
         this.setState({ artist });
         this.setState({ name: artist.name})
         this.state.id = artist.id;
-        // this.setState({ id: artist.id})
-
-        console.log('this.state', this.state);
-        console.log('this.id', this.state.id);
+    
         this.getToptracks(this.state.id)
 
       })
 
     
-
   }
 
 
@@ -61,8 +53,6 @@ class App extends Component {
     const BASE_URL = 'https://api.spotify.com/v1/artists/';
     const FETCH_URL = BASE_URL + id + '/top-tracks?country=SE'
     
-
-    // const FETCH_URL = BASE_URL + this.state.id + '/top-tracks?country=SE'
     var accessToken = this.state.accessToken;
 
     var myOptions = {
@@ -77,23 +67,14 @@ class App extends Component {
     fetch(FETCH_URL, myOptions)
       .then(response => response.json())
       .then(json => {
-        // console.log(json)
+
         const tracks = json.tracks;
         this.setState({ tracks });
         
-        // this.setState({ name: artist.name})
-        // this.setState({ id: artist.id})
 
       })
 
   }
-  // search() {
-  //   this.searchArtist()
-
-  //   // this.getToptracks()
-    
-  // }
-  
 
   componentDidMount() {
 
@@ -179,14 +160,8 @@ class App extends Component {
     ]
     if (this.state.tracks !== null) {
       tracks = this.state.tracks;
-      // tracks.song = this.state.tracks[0].name
     }
 
-    // const listItems = tracks.map((t, index) =>
-    //   <li key={index}>
-    //   {t.name}
-    // </li>
-    // );
     const columns = [
     {
       Header: "Spotify Popularity",
